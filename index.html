@@ -48,6 +48,13 @@
             list-style-type: none; /* Eliminamos los puntos de la lista */
             padding: 0;
         }
+        .actividad-section ul a {
+            color: red; /* Color rojo para los enlaces */
+            text-decoration: none;
+        }
+        .actividad-section ul a:hover {
+            text-decoration: underline; /* Subrayado al pasar el cursor */
+        }
     </style>
     <script>
         function mostrarActividades(id) {
@@ -74,7 +81,7 @@
     <div id="parcial1" class="actividad-section">
         <h3>Parcial 1</h3>
         <ul>
-            <li>Actividad 1</li>
+            <li><a href="act1.html">Actividad 1</a></li>
             <li>Actividad 2</li>
             <li>Actividad 3</li>
             <li>Actividad 4</li>
