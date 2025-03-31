@@ -36,19 +36,28 @@
         nav a:hover {
             text-decoration: underline;
         }
-        #actividad-lista {
-            display: none; /* Ocultamos la lista inicialmente */
+        .actividad-section {
+            display: none; /* Ocultamos la sección inicialmente */
             margin-top: 20px;
         }
-        #actividad-lista li {
+        .actividad-section h3 {
+            color: red; /* Color rojo para el subtítulo */
+        }
+        .actividad-section ul {
             color: red; /* Color rojo para las actividades */
             list-style-type: none; /* Eliminamos los puntos de la lista */
+            padding: 0;
         }
     </style>
     <script>
-        function mostrarActividades() {
-            const lista = document.getElementById('actividad-lista');
-            lista.style.display = 'block'; /* Mostramos la lista */
+        function mostrarActividades(id) {
+            // Ocultamos todas las secciones de actividades
+            const secciones = document.querySelectorAll('.actividad-section');
+            secciones.forEach(section => section.style.display = 'none');
+
+            // Mostramos la sección correspondiente
+            const seleccionada = document.getElementById(id);
+            seleccionada.style.display = 'block';
         }
     </script>
 </head>
@@ -56,21 +65,60 @@
     <h1>Portafolio</h1>
     <h2>Jamil Abraham Rivera Acosta</h2>
     <nav>
-        <a href="javascript:void(0);" onclick="mostrarActividades()">Parcial 1</a>
-        <a href="#parcial2">Parcial 2</a>
-        <a href="#parcial3">Parcial 3</a>
+        <a href="javascript:void(0);" onclick="mostrarActividades('parcial1')">Parcial 1</a>
+        <a href="javascript:void(0);" onclick="mostrarActividades('parcial2')">Parcial 2</a>
+        <a href="javascript:void(0);" onclick="mostrarActividades('parcial3')">Parcial 3</a>
     </nav>
-    <ul id="actividad-lista">
-        <li>Actividad 1</li>
-        <li>Actividad 2</li>
-        <li>Actividad 3</li>
-        <li>Actividad 4</li>
-        <li>Actividad 5</li>
-        <li>Actividad 6</li>
-        <li>Actividad 7</li>
-        <li>Actividad 8</li>
-        <li>Actividad 9</li>
-        <li>Actividad 10</li>
-    </ul>
+
+    <!-- Sección de actividades para Parcial 1 -->
+    <div id="parcial1" class="actividad-section">
+        <h3>Parcial 1</h3>
+        <ul>
+            <li>Actividad 1</li>
+            <li>Actividad 2</li>
+            <li>Actividad 3</li>
+            <li>Actividad 4</li>
+            <li>Actividad 5</li>
+            <li>Actividad 6</li>
+            <li>Actividad 7</li>
+            <li>Actividad 8</li>
+            <li>Actividad 9</li>
+            <li>Actividad 10</li>
+        </ul>
+    </div>
+
+    <!-- Sección de actividades para Parcial 2 -->
+    <div id="parcial2" class="actividad-section">
+        <h3>Parcial 2</h3>
+        <ul>
+            <li>Actividad 1</li>
+            <li>Actividad 2</li>
+            <li>Actividad 3</li>
+            <li>Actividad 4</li>
+            <li>Actividad 5</li>
+            <li>Actividad 6</li>
+            <li>Actividad 7</li>
+            <li>Actividad 8</li>
+            <li>Actividad 9</li>
+            <li>Actividad 10</li>
+        </ul>
+    </div>
+
+    <!-- Sección de actividades para Parcial 3 -->
+    <div id="parcial3" class="actividad-section">
+        <h3>Parcial 3</h3>
+        <ul>
+            <li>Actividad 1</li>
+            <li>Actividad 2</li>
+            <li>Actividad 3</li>
+            <li>Actividad 4</li>
+            <li>Actividad 5</li>
+            <li>Actividad 6</li>
+            <li>Actividad 7</li>
+            <li>Actividad 8</li>
+            <li>Actividad 9</li>
+            <li>Actividad 10</li>
+        </ul>
+    </div>
 </body>
 </html>
