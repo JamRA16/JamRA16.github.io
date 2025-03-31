@@ -31,19 +31,46 @@
             margin: 0 15px;
             text-decoration: none;
             font-size: 1.2em;
+            cursor: pointer;
         }
         nav a:hover {
             text-decoration: underline;
         }
+        #actividad-lista {
+            display: none; /* Ocultamos la lista inicialmente */
+            margin-top: 20px;
+        }
+        #actividad-lista li {
+            color: red; /* Color rojo para las actividades */
+            list-style-type: none; /* Eliminamos los puntos de la lista */
+        }
     </style>
+    <script>
+        function mostrarActividades() {
+            const lista = document.getElementById('actividad-lista');
+            lista.style.display = 'block'; /* Mostramos la lista */
+        }
+    </script>
 </head>
 <body>
     <h1>Portafolio</h1>
     <h2>Jamil Abraham Rivera Acosta</h2>
     <nav>
-        <a href="#parcial1">Parcial 1</a>
+        <a href="javascript:void(0);" onclick="mostrarActividades()">Parcial 1</a>
         <a href="#parcial2">Parcial 2</a>
         <a href="#parcial3">Parcial 3</a>
     </nav>
+    <ul id="actividad-lista">
+        <li>Actividad 1</li>
+        <li>Actividad 2</li>
+        <li>Actividad 3</li>
+        <li>Actividad 4</li>
+        <li>Actividad 5</li>
+        <li>Actividad 6</li>
+        <li>Actividad 7</li>
+        <li>Actividad 8</li>
+        <li>Actividad 9</li>
+        <li>Actividad 10</li>
+    </ul>
 </body>
 </html>
