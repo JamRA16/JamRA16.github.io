@@ -8,18 +8,18 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #000; /* Fondo negro */
-            color: #fff; /* Texto blanco para mejor visibilidad */
+            background-color: #000; 
+            color: #fff; 
             margin: 0;
             padding: 0;
         }
         h1 {
             font-size: 3em;
             margin-top: 20px;
-            color: red; /* Color rojo para la palabra "Portafolio" */
+            color: red; 
         }
         h2 {
-            color: red; /* Color rojo para el nombre */
+            color: red; 
             margin-bottom: 40px;
         }
         nav {
@@ -27,7 +27,7 @@
             padding: 10px 0;
         }
         nav a {
-            color: red; /* Color del texto del menú */
+            color: red;
             margin: 0 15px;
             text-decoration: none;
             font-size: 1.2em;
@@ -41,7 +41,7 @@
             margin-top: 20px;
         }
         .actividad-section h3 {
-            color: red; /* Color rojo para el subtítulo */
+            color: red; 
         }
         .actividad-section ul {
             color: red; /* Color rojo para las actividades */
@@ -49,20 +49,19 @@
             padding: 0;
         }
         .actividad-section ul a {
-            color: red; /* Color rojo para los enlaces */
+            color: red; 
             text-decoration: none;
         }
         .actividad-section ul a:hover {
-            text-decoration: underline; /* Subrayado al pasar el cursor */
+            text-decoration: underline; 
         }
     </style>
     <script>
         function mostrarActividades(id) {
-            // Ocultamos todas las secciones de actividades
+            
             const secciones = document.querySelectorAll('.actividad-section');
             secciones.forEach(section => section.style.display = 'none');
 
-            // Mostramos la sección correspondiente
             const seleccionada = document.getElementById(id);
             seleccionada.style.display = 'block';
         }
@@ -98,7 +97,7 @@
     <div id="parcial2" class="actividad-section">
         <h3>Parcial 2</h3>
         <ul>
-            <li>Actividad 1</li>
+            <li><a href="par2act1.html">Actividad 1</a></li>
             <li><a href="par2act2.html">Actividad 2</a></li>
             <li><a href="u2 act 3 .html">Actividad 3</a></li>
             <li>Actividad 4</li>
