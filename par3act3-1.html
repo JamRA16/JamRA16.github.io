@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Unidad 3 Actividad 3.1</title>
+        <meta charset="UTF-8">
+        <meta name="Autor" content="Jamil Abraham Rivera Acosta">
+        <meta name="Fecha" content="7 de mayo 2025">
+        <meta name="Descripción" content="Operadores html">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>
+        <h2>Unidad 3 Act 3.1Tema </h2>
+        <script>
+           let numTabla, topeTabla;
+           do {
+               numTabla = window.prompt("¿Cuál tabla deseas calcular [1 a 1000]?");
+           } while (numTabla < 1 || numTabla > 1000);
+           
+           do {
+               topeTabla = window.prompt("¿Hasta qué número deseas calcular la tabla?");
+           } while (topeTabla < 1 || topeTabla > 100);
+           
+           let resultado = 0;
+           let i = 1;
+
+           // Crear la tabla con Bootstrap
+           document.write('<div class="container mt-4">');
+           document.write('<table class="table table-bordered table-striped">');
+           document.write('<thead class="thead-dark"><tr><th>Multiplicación</th><th>Resultado</th></tr></thead>');
+           document.write('<tbody>');
+
+           while (i <= topeTabla) {
+               resultado = numTabla * i;
+               document.write('<tr><td>' + numTabla + ' * ' + i + '</td><td>' + resultado + '</td></tr>');
+               i++;
+           }
+
+           document.write('</tbody></table></div>');
+        </script>
+    </body>
+</html>
