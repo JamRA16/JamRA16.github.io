@@ -1,41 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Unidad 3 Actividad 3.1</title>
+        <title>Unidad 3 actividad 3</title>
         <meta charset="UTF-8">
         <meta name="Autor" content="Jamil Abraham Rivera Acosta">
-        <meta name="Fecha" content="7 de mayo 2025">
+        <meta name="Fecha" content="1 de mayo 2025">
         <meta name="Descripción" content="Operadores html">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     </head>
     <body>
-        <h2>Unidad 3 Act 3.1Tema </h2>
+        <h2>Unidad 3 Act 3</h2>
         <script>
-           let numTabla, topeTabla;
-           do {
-               numTabla = window.prompt("¿Cuál tabla deseas calcular [1 a 1000]?");
-           } while (numTabla < 1 || numTabla > 1000);
-           
-           do {
-               topeTabla = window.prompt("¿Hasta qué número deseas calcular la tabla?");
-           } while (topeTabla < 1 || topeTabla > 100);
-           
-           let resultado = 0;
-           let i = 1;
+            /*
+            1.- Sumar
+            2.- Restar
+            3.- Multiplicar
+            4.- Dividir
+            */
+            let opc = window.prompt("Menú de opciones: \n1.- Sumar \n2.- Restar\n3.- Multiplicar \n4.- Dividir\n");
+            let val_1 = window.prompt("Dame el primer valor:");
+            let val_2 = window.prompt("Dame el segundo valor:");
 
-           // Crear la tabla con Bootstrap
-           document.write('<div class="container mt-4">');
-           document.write('<table class="table table-bordered table-striped">');
-           document.write('<thead class="thead-dark"><tr><th>Multiplicación</th><th>Resultado</th></tr></thead>');
-           document.write('<tbody>');
+            // Convertir los valores a números flotantes
+            val_1 = parseFloat(val_1);
+            val_2 = parseFloat(val_2);
 
-           while (i <= topeTabla) {
-               resultado = numTabla * i;
-               document.write('<tr><td>' + numTabla + ' * ' + i + '</td><td>' + resultado + '</td></tr>');
-               i++;
-           }
+            switch (opc) {
+                case "1": // Sumar
+                    document.write("<h3>Operación Suma</h3>");
+                    document.write("<code>" + val_1 + " + " + val_2 + " = " + (val_1 + val_2) + "</code>");
+                    break;
 
-           document.write('</tbody></table></div>');
+                case "2": // Restar
+                    document.write("<h3>Operación Resta</h3>");
+                    document.write("<code>" + val_1 + " - " + val_2 + " = " + (val_1 - val_2) + "</code>");
+                    break;
+
+                case "3": // Multiplicar
+                    document.write("<h3>Operación Multiplicación</h3>");
+                    document.write("<code>" + val_1 + " x " + val_2 + " = " + (val_1 * val_2) + "</code>");
+                    break;
+
+                case "4": // Dividir
+                    if (val_2 !== 0) {
+                        document.write("<h3>Operación División</h3>");
+                        document.write("<code>" + val_1 + " / " + val_2 + " = " + (val_1 / val_2) + "</code>");
+                    } else {
+                        document.write("<h3>Error</h3>");
+                        document.write("<code>No se puede dividir entre 0</code>");
+                    }
+                    break;
+
+                default:
+                    document.write("<h3>Error</h3>");
+                    document.write("<code>Opción no válida</code>");
+                    break;
+            }
         </script>
     </body>
 </html>
